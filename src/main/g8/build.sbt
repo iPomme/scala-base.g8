@@ -16,6 +16,6 @@ lazy val root = (project in file(".")).
   settings(commonSettings: _*).
   settings(
     libraryDependencies ++= Seq(
-      scalactic, scalatest, logback
+      cats, shapeless, scalactic, scalatest, scalalogging, logback
     )
   )

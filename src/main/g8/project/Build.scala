@@ -2,6 +2,8 @@ import sbt._
 
 object Build {
   val akkaVersion = "$akka_version$"
+  val catsVersion = "$cats_version$"
+  val shapelessVersion = "$shapeless_version$"
 
   val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
   val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
@@ -15,21 +17,21 @@ object Build {
 
   val levelDb = "org.iq80.leveldb" % "leveldb" % "0.7"
 
-  val cats = "org.spire-math" %% "cats" % "0.3.0"
+  val cats = "org.spire-math" %% "cats" % catsVersion
+  val shapeless = "com.chuusai" %% "shapeless" % shapelessVersion
 
-  val amazonAWS = "com.amazonaws" % "aws-java-sdk" % "1.10.14"
+  val sbtIO = "org.scala-sbt" %% "io" % "0.13"
 
-  val sbtIO = "org.scala-sbt" %% "io" % "0.13.11"
+//  val scalaAsync = "org.scala-lang.modules" %% "scala-async" % "0.9.2"
+//  val scalaJava8 = "org.scala-lang.modules" %% "scala-java8-compat" % "0.7.0"
+//
+//  val playJson = "com.typesafe.play" %% "play-json" % "2.4.0"
+//
+  val scalactic = "org.scalactic" %% "scalactic" % "3.0.1"
 
-  val scalaAsync = "org.scala-lang.modules" %% "scala-async" % "0.9.2"
-  val scalaJava8 = "org.scala-lang.modules" %% "scala-java8-compat" % "0.7.0"
+  val scalalogging = "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0"
 
-  val playJson = "com.typesafe.play" %% "play-json" % "2.4.0"
-
-  val scalactic = "org.scalactic" %% "scalactic" % "2.2.6"
-
-  val logback = "ch.qos.logback" % "logback-classic" % "1.1.6"
-
-  val scalatest = "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+  val logback = "ch.qos.logback" % "logback-classic" % "1.1.8"
   val junit = "junit" % "junit" % "4.11" % "test"
 }
