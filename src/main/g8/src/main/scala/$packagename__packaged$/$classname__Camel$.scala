@@ -7,7 +7,7 @@ import com.typesafe.scalalogging.Logger
   */
 object $classname$ {
 
-  val log = Logger[Main.type]
+  val log = Logger[$classname$.type]
 
   def foo(x: Array[String]) = x.foldLeft("")((a, b) => a + b)
 
